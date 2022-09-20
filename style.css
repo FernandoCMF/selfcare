@@ -145,12 +145,12 @@ hr {
   margin-top: 100px;
   width: 100%;
   background-color: #f9f9f9;
-  height: 400px;
+  min-height: 400px;
 }
 
 .footerDescriptions {
   width: 100%;
-  height: 250px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -185,10 +185,11 @@ hr {
 
 .inputEmail {
   display: flex;
+  max-width: 400px;
 }
 
 .inputEmail > input {
-  width: 400px;
+  width: 100%;
   height: 60px;
   padding: 10px;
   border: 2px solid transparent;
@@ -241,4 +242,61 @@ hr {
   margin-left: 20px;
   color: green;
   cursor: pointer;
+}
+
+/* ######## */
+
+@media (max-width: 1010px) {
+  .sectionContentItens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+  }
+}
+
+@media (max-width: 835px) {
+  .Descriptions {
+    margin-bottom: 25px;
+  }
+  .newsletter {
+    margin-top: 25px;
+  }
+
+  .inputEmail {
+    flex-direction: column;
+  }
+
+  .inputEmail > input {
+    border-radius: 10px;
+  }
+
+  .inputEmail > button {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sectionContentItens {
+    align-items: center;
+    justify-content: center;
+  }
+  .item {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .item:hover {
+    padding: 0px;
+  }
+
+  .itemTitle {
+    font-size: 18px;
+  }
+  .price,
+  a {
+    font-size: 15px;
+  }
 }
